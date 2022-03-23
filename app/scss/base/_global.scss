@@ -1,0 +1,18 @@
+body {
+ font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+ display: none;
+ @include media (md) {
+  display: block;
+ }
+}
+
+.logo-mobile {
+ display: block;
+ margin-right: 20px;
+  @include media (md) {
+   display: none;
+  }
+}

@@ -1,0 +1,137 @@
+.header-top {
+ display: flex;
+ background-color: #31352B;
+ .container {
+  @extend %container;
+ }
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+ }
+ &__burger-btn {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+   @include media (md) {
+    display: none;
+   }
+ }
+ &__burger-line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+   &::after,
+   &::before {
+    @include pseudo;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+   }
+   &::before {
+    top: 10px;
+   }
+   &::after {
+    top: 20px;
+   }
+ }
+ &__burger-btn--active {
+  position: absolute;
+  right: 135px;
+  top: 50px;
+  z-index: 999;
+ }
+
+ &__burger-btn--active &__burger-line {
+  transition: transform 0.5s ease;
+  transform: rotate(45deg);
+  background-color: #000;
+  transition: all 0.8s;
+}
+
+ &__burger-btn--active &__burger-line::before {
+   top: 0;
+   transform: rotate(90deg);
+   background-color: #000;
+ }
+
+ &__burger-btn--active &__burger-line::after {
+   opacity: 0;
+ }
+ &__info {
+  display: none;
+  color: $primaryColor;
+   @include media (md) {
+    display: flex;
+    margin-right: auto;
+   }
+ }
+ &__info-address,
+ &__info-phone {
+  position: relative;
+   &::before {
+    height: 22px;
+    left: -50px; 
+   }
+   @include media (md) {
+    display: block;
+   }
+ }
+ &__info-address {
+  margin-right: 82px;
+  padding-left: 40px;
+   &::before {
+    @include pseudo;
+    @include background (url("../images/icons/delivery.svg"));
+    width: 32px;
+    left: 0;
+   }
+ }
+ &__info-phone {
+  &::before {
+   @include pseudo;
+   @include background (url("../images/icons/phone.svg"));
+   width: 22px;
+   left: -30px;
+  }
+ }
+ &__info-link,
+ &__phone-link {
+  @include text (13px, 1.3, $primaryColor);
+  padding-bottom: 5px;
+  transition: all 0.5s;
+   &:hover {
+    border-bottom: 1px solid $secondaryColor;
+   }
+ }
+ &__menu {
+  display: none;
+   @include media (lg) {
+    display: block;
+   }
+ }
+ &__list {
+  display: flex;
+ }
+ &__item {
+  &:not(:last-child) {
+   margin-right: 24px;
+  }
+ } 
+ &__link {
+  @include text (13px, 1.3, $primaryColor);
+  padding-bottom: 5px;
+  transition: all 0.5s;
+   &:hover {
+    border-bottom: 1px solid $secondaryColor;
+   }
+ }
+ &__contacts {
+  @include media (md) {
+   display: none;
+  }
+ }
+}

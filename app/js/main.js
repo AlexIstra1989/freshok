@@ -28,5 +28,5 @@ $(function() {
   $('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
  });
 
-
+ var Mixer = mixitup('.top-products__inner');
 });

@@ -1,0 +1,59 @@
+.promo {
+ background-color: #F5F5F5;
+ padding: 48px 0;
+ .container {
+  @extend %container;
+ }
+ &__filters {
+  text-align: center;
+  margin-bottom: 28px;
+ }
+ &__filter {
+  display: inline-block;
+   &:not(:last-child) {
+    margin-right: 30px;
+   }
+ }
+ &__btn {
+  @include text(14px, 1.4, $textColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s;
+  &:hover {
+   color: $secondaryColor;
+  }
+  &:focus {
+   box-shadow: 0px 0px 0px 3px #E0EDCF;
+   border-radius: 3px;
+  }
+ }
+ &__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+ }
+ &__item {
+  display: flex;
+  background-color: $primaryColor;
+  padding: 13px 0;
+ }
+ &__box {
+  display: flex;
+  flex-direction: column;
+  max-width: 160px;
+  width: 100%;
+ }
+ &__name {
+  @include text(14px, 1.4, $titleColor);
+  margin-bottom: auto;
+ }
+ &__status {
+  @include text(10px, 1, $secondaryColor);
+  margin-bottom: 5px;
+ }
+ &__holder {
+  display: flex;
+  justify-content: space-between;
+ }
+
+}

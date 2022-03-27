@@ -2,6 +2,15 @@ body {
  font-family: 'Open Sans', sans-serif;
 }
 
+.title {
+ @include text(24px, 1.4, $titleColor);
+ font-family: "Ruda", sans-serif;
+ font-weight: 600;
+ text-align: center;
+ margin-bottom: 24px;
+ text-transform: uppercase;
+}
+
 .logo {
  display: none;
  @include media (md) {

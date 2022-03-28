@@ -29,4 +29,5 @@ $(function() {
  });
 
  var Mixer = mixitup('.top-products__inner');
+ var Mixer = mixitup('.promo__content');
 });

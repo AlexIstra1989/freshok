@@ -725,23 +725,23 @@
      </h2>
      <ul class="promo__filters">
       <li class="promo__filter">
-       <button class="promo__btn">
+       <button class="promo__btn" type="button" data-filter="all">
         ВСЕ ТОВАРЫ
        </button>
       </li>
       <li class="promo__filter">
-       <button class="promo__btn">
+       <button class="promo__btn" type="button" data-filter=".category-a">
         НОВИНКИ
        </button>
       </li>
       <li class="promo__filter">
-       <button class="promo__btn">
+       <button class="promo__btn" type="button" data-filter=".category-b">
         ХИТЫ
        </button>
       </li>
      </ul>
      <div class="promo__content">
-      <div class="promo__item">
+      <div class="promo__item promo__item-new mix category-a">
        <img class="promo__image" src="images/products/pineapple.jpg" alt="#">
        <div class="promo__box">
         <h4 class="promo__name">
@@ -752,14 +752,143 @@
         </span>
         <div class="promo__holder">
          <div class="promo__prices">
-          <span class="promo__price-new">999₽</span>
+          <span class="promo__price-new">999<span>₽</span></span>
           <span class="promo__price-old">1999₽</span>
          </div>
          <span class="promo__rating">4.5 </span>
         </div>
        </div>
       </div>
+      <div class="promo__item promo__item-new mix category-a">
+       <img class="promo__image" src="images/products/coffee.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Кофе с коноплей органический Caffé Salomoni 250г
+        </h4>
+        <span class="promo__status promo__status--ending">
+         ЗАКАНЧИВАЕТСЯ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">777<span>₽</span></span>
+          <span class="promo__price-old">877 ₽</span>
+         </div>
+         <span class="promo__rating">4.9</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-new mix category-a">
+       <img class="promo__image" src="images/products/strawberry.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Клубника, 1 кг
+        </h4>
+        <span class="promo__status promo__status--not">
+         НЕТ В НАЛИЧИИ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">440<span>₽</span></span>
+          <span class="promo__price-old">600₽</span>
+         </div>
+         <span class="promo__rating">5.0</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-new mix category-a">
+       <img class="promo__image" src="images/products/mango.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Манго, 1 шт
+        </h4>
+        <span class="promo__status">
+         В НАЛИЧИИ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">660<span>₽</span></span>
+          <span class="promo__price-old">960₽</span>
+         </div>
+         <span class="promo__rating">5.0</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-new mix category-a">
+       <img class="promo__image" src="images/products/fish.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Лосось, 1 кг
+        </h4>
+        <span class="promo__status">
+         В НАЛИЧИИ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">999<span>₽</span></span>
+          <span class="promo__price-old">1199₽</span>
+         </div>
+         <span class="promo__rating">4.5</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-hit mix category-b">
+       <img class="promo__image" src="images/products/veg-juice.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Сок Granini овощной 100%, 0.5л
+        </h4>
+        <span class="promo__status promo__status--ending">
+         ЗАКАНЧИВАЕТСЯ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">180<span>₽</span></span>
+          <span class="promo__price-old">230₽</span>
+         </div>
+         <span class="promo__rating">4.9</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-hit mix category-b">
+       <img class="promo__image" src="images/products/basket.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Фруктовая корзина, 1 шт
+        </h4>
+        <span class="promo__status">
+         В НАЛИЧИИ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">3990<span>₽</span></span>
+          <span class="promo__price-old">5990₽</span>
+         </div>
+         <span class="promo__rating">4.8</span>
+        </div>
+       </div>
+      </div>
+      <div class="promo__item promo__item-hit mix category-b">
+       <img class="promo__image" src="images/products/meat.jpg" alt="#">
+       <div class="promo__box">
+        <h4 class="promo__name">
+         Свинина мякоть, 1 кг
+        </h4>
+        <span class="promo__status">
+         В НАЛИЧИИ
+        </span>
+        <div class="promo__holder">
+         <div class="promo__prices">
+          <span class="promo__price-new">499<span>₽</span></span>
+          <span class="promo__price-old">599₽</span>
+         </div>
+         <span class="promo__rating">4.6</span>
+        </div>
+       </div>
+      </div>
      </div>
+     <a class="promo__link" href="#">
+      Показать еще
+     </a>
    </div>
   </section>
 

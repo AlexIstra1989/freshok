@@ -23,6 +23,15 @@ $(function() {
    ]
  });
 
+ $('.brands__slider').slick ({
+  // infinite: true,
+  // fade: true,
+  // autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  //variableWidth: true
+ });
+
  $('.header-top__burger-btn').on('click', function(){
   $('.header-mobile').toggleClass('header-mobile--active'),
   $('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');

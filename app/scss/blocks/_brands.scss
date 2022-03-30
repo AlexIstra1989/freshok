@@ -1,18 +1,38 @@
 .brands {
- 
- &__image .slick-slide  {
-
-
+ padding: 60px 0;
+ &__slider {
+  @include media (sm) {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+  }
  }
-
-
-
-
-
-
-
-
-
-
-
+ &__image   {
+  margin-right: 51px;
+   @include media (sm) {
+   margin: 20px;
+   } 
+ }
+ .slick-track{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+ }
+ .slick-dots {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+   li {
+    width: 10px;
+    height: 10px;
+    background-color: $primaryColor;
+    border: 1px solid #C1C1C1;
+    border-radius: 50%;
+    z-index: 444;
+     &:not(:last-child) {
+      margin-right: 12px;
+     }
+   }
+ }
 }

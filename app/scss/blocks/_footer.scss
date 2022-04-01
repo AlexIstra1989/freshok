@@ -1,0 +1,7 @@
+.footer {
+ background-color: $accentColor;
+ padding: 30px 0 24px;
+ .container {
+  @extend %container;
+ }
+}

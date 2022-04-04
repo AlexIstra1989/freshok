@@ -4,18 +4,37 @@
   @extend %container;
  }
  &__inner {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 306px);
+  gap: 12px;
+  @include media (md) {
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 306px);
+  }
+  @include media (lg) {
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 306px;
+   gap: 20px;
+  } 
  }
  &__item {
-  &:not(:last-child) {
-   margin-bottom: 12px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 33px;
  }
  &__item-fruits {
   @include background (url("../images/banners/fruits-bg.jpg"));
-  background-position: right;
-  padding: 79px 0 33px 15px; 
+  @include media (md) {
+   grid-area: 1/1/1/3;
+  }
+ }
+ &__item-vegetables {
+  @include background (url("../images/banners/vegetables-bg.jpg"));
+ }
+ &__item-bread {
+  @include background (url("../images/banners/bread.jpg"));
  }
  &__subtitle {
   @include text(12px, 1, $primaryColor);
@@ -28,26 +47,19 @@
   @include text(24px, 1.4, $primaryColor);
   font-family: "Ruda", sans-serif;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
-  max-width: 260px;
+  max-width: 340px;
   margin-bottom: 77px;
    &--black {
     color: $titleColor;
    } 
  }
  &__link {
+  max-width: 185px;
   padding-bottom: 6px;
   border-bottom: 2px solid $primaryColor;
    &--black {
-    color: $titleColor;
-    border-bottom: 2px solid $titleColor;
-   } 
- }
- &__item-vegetables {
-  @include background (url("../images/banners/vegetables-bg.jpg"));
-  padding: 76px 0 31px 15px;
- }
- &__item-bread {
-  @include background (url("../images/banners/bread.jpg"));
-  padding: 76px 0 31px 15px; 
+   color: $titleColor;
+   border-bottom: 2px solid $titleColor;
+  } 
  }
 }

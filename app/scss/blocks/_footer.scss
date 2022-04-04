@@ -50,19 +50,39 @@
  }
  &__form {
   padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
  }
  &__form-text {
-  text-align: left;
   margin-bottom: 18px;
+  padding-left: 17px;
  }
  &__field {
   width: 180px;
-  padding: 12px 0 12px 12px;  
+  padding: 9px 0 11px 12px;  
+  border-radius: 6px 0 0 6px;
+  border: none;
+  outline: none;
  }
  &__btn {
   @include text(12px, 1.3, $primaryColor);
+  font-weight: 700;
   background-color: $secondaryColor;
-  padding: 12px 0;
+  padding: 12px;
   max-width: 118px;
+  margin-left: -5px;
+  border-radius: 0 6px 6px 0;
+ }
+ &__copyright {
+  padding: 24px 0;
+ }
+ &__copyright-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+ }
+ &__copyright-item {
+  &:not(:last-child) {
+   margin-right: 24px;
+  }
  }
 }

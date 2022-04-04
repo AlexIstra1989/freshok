@@ -36,6 +36,16 @@
   gap: 15px;
   margin-bottom: 24px;
   text-align: left;
+   @include media (md) {
+    grid-template-columns: repeat(2, 1fr);
+   }
+   @include media (lg) {
+    grid-template-columns: repeat(3, 1fr);
+   }
+   @include media (xxl) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+   }
  }
  &__item {
   display: flex;

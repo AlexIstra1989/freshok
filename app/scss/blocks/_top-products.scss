@@ -33,9 +33,16 @@
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 304px);
+  grid-template-rows: repeat(304px);
   gap: 5px;
   margin-bottom: 24px;
+  @include media (md) {
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(409px);
+  }
+   @include media (xxl) {
+    grid-template-columns: repeat(4, 1fr);
+   }
  }
  &__card {
   display: flex;
@@ -67,6 +74,13 @@
       content: "-30%";
       top: 12px;
      }
+   }
+   @include media (sm) {
+    width: 200px; 
+    height: 409px;
+   }
+   @include media (lg) {
+    width: 300px;
    }
  }
  &__card-top {

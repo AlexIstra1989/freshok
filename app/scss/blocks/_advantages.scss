@@ -8,6 +8,14 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+    @include media (lg) {
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: flex-start;
+    }
+    @include media (xl) {
+     justify-content: space-between;
+    }
   }
   &__delivery,
   &__returns,
@@ -20,17 +28,26 @@
      height: 50px;
      left: -65px;
     }
+    @include media (lg) {
+     width: 190px;
+    }
   }
   &__delivery {
    margin-bottom: 30px;
     &::before {
      @include background (url("../images/icons/scooter.svg"));
     }
+    @include media (lg) {
+     margin-bottom: 0;
+    }
   }
   &__returns {
    margin-bottom: 30px;
     &::before {
      @include background (url("../images/icons/return.svg"));
+    }
+    @include media (lg) {
+     margin-bottom: 0;
     }
   }
   &__support {

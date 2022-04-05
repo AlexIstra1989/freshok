@@ -53,6 +53,7 @@
   width: 168px;
   height: 304px;
   transition: all 0.5s;
+  cursor: pointer;
   &:hover {
    border-color: $secondaryColor;
   }

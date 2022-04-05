@@ -1,3 +1,8 @@
+document.querySelector('.header-bottom__catalog-btn').addEventListener('click', function(){
+ document.querySelector('.header-bottom__catalog-list').classList.toggle('header-bottom__catalog-list--visible');
+ this.classList.toggle('header-bottom__catalog-btn--active');
+});
+
 $(function() {
  $('.slider__inner').slick ({
   infinite: true,
@@ -24,14 +29,6 @@ $(function() {
  });
 
  $('.brands__slider').slick ({
-  // arrows: false,
-  // dots: false,
-  // infinite: true,
-  // autoplay: true,
-  // slidesToShow: 3,
-  // slidesToScroll: 2,
-  // speed: 2000,
-  // variableWidth: true,
   responsive:[
    {
     breakpoint: 1600,
@@ -60,4 +57,6 @@ $(function() {
 
  var Mixer = mixitup('.top-products__inner');
  var Mixer = mixitup('.promo__content');
+
+ 
 });

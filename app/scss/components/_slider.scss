@@ -28,6 +28,9 @@
  &__content {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 24px 15px;
+  @include media (lg) {
+   padding: 24px 50px;
+  }
  }
  .container {
   @extend %container_slider-content;
@@ -42,7 +45,7 @@
     color: #eb0808;
     display: block;
    }
-   @include media (xl) {
+   @include media (lg) {
     font-size: 60px;
    }
  }

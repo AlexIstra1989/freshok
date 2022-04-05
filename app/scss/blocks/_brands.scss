@@ -1,16 +1,25 @@
 .brands {
  padding: 60px 0;
+ .container {
+  @extend %container;
+ }
  &__slider {
   @include media (sm) {
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    flex-wrap: wrap;
+  }
+  @include media (lg) {
+   justify-content: space-between;
   }
  }
  &__image   {
   margin-right: 51px;
    @include media (sm) {
    margin: 20px;
+   } 
+   @include media (lg) {
+    margin: 0;
    } 
  }
  .slick-track{

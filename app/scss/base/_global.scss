@@ -13,7 +13,7 @@ body {
 
 .logo {
  display: none;
- @include media (md) {
+ @include media (xl) {
   display: block;
  }
 }
@@ -21,7 +21,7 @@ body {
 .logo-mobile {
  display: block;
  margin-right: 20px;
-  @include media (md) {
+  @include media (xl) {
    display: none;
   }
 }

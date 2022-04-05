@@ -213,7 +213,6 @@
         </a>
        </div>
       </div>
-  
      </div>
     </div>
     <div class="header-bottom">
@@ -326,9 +325,74 @@
           d="M6.99588 7.03022C6.57944 7.03022 6.22874 6.70915 6.22874 6.32788C6.22874 4.6824 5.72462 3.43826 4.76021 2.61552C3.20401 1.27104 0.858744 1.41151 0.836826 1.41151C0.420377 1.45164 0.0477647 1.15064 0.00392799 0.769368C-0.0399087 0.388098 0.288867 0.0469614 0.705315 0.00682776C0.836826 0.00682776 3.73005 -0.193841 5.79037 1.55197C7.10548 2.65565 7.76303 4.261 7.76303 6.30782C7.76303 6.70915 7.43425 7.03022 6.99588 7.03022Z"
           fill="white" />
         </svg>
-       </a>                     
+       </a>   
+
        <div class="header-bottom__catalog">
-        
+        <div class="header-bottom__catalog-box">
+         <button class="header-bottom__catalog-btn" type="button">Каталог продуктов</button>
+         <ul class="header-bottom__catalog-list header-bottom__catalog-list--visible">
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Овощи и фрукты 
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Бакалея
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Молочные продукты
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Хлеб
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Мясо
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Колбаса
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Рыба
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Алкоголь
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Напитки
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Торты
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Мясо
+           </a> 
+          </li>
+          <li class="header-bottom__catalog-item">
+           <a class="header-bottom__catalog-link" href="#">
+            Чай, кофе
+           </a> 
+          </li>
+         </ul>
+        </div>
        </div>
        <form class="header-bottom__form" action="#">
         <input class="header-bottom__field" type="text" placeholder="Найти в магазине ...">
@@ -483,7 +547,7 @@
        Возврат товара
       </h4>
       <p class="advantages__returns-text">
-       Если товары были испорчены 
+       Если испорчен товар
       </p>
      </div>
      <div class="advantages__support">
@@ -917,26 +981,31 @@
 
   <section class="news">
    <div class="container">
-    <h2 class="news__title title">
-     НАШИ НОВОСТИ
-    </h2>
-    <a class="news__link" href="#">
-     ВСЕ  НОВОСТИ
-    </a>
+    <div class="news__top">
+     <h2 class="news__title title">
+      НАШИ НОВОСТИ
+     </h2>
+     <a class="news__link" href="#">
+      ВСЕ  НОВОСТИ
+     </a>
+    </div>
     <div class="news__inner">
      <div class="news__item news__item-jule">
+      <span class="news__date">ИЮЛЬ<span>15</span></span>
       <img class="news__image" src="images/news/news-jule.jpg" alt="#">
        <p class="news__text">
         Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
        </p>
      </div>
      <div class="news__item news__item-may">
+      <span class="news__date">МАЙ<span>15</span></span>
       <img class="news__image" src="images/news/news-may.jpg" alt="#">
        <p class="news__text">
         Шикарнейший выбор манго в нашем онлайн-маркете
        </p>
      </div>
      <div class="news__item news__item-february">
+      <span class="news__date news__date--february">ФЕВРАЛЬ<span>15</span></span>
       <img class="news__image" src="images/news/news-february.jpg" alt="#">
        <p class="news__text">
         Всё, что вы хотели знать о папайя
@@ -1021,7 +1090,7 @@
         </a>
        </li>
        <li class="footer__social-item">
-        <a class="header-mobile__social-link" href="#">
+        <a class="footer__social-link" href="#">
          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
            d="M31.2919 3.90543L31.3319 4.16677C30.9452 2.79477 29.9012 1.7361 28.5746 1.35077L28.5466 1.3441C26.0519 0.666766 16.0132 0.666766 16.0132 0.666766C16.0132 0.666766 5.9999 0.653433 3.4799 1.3441C2.1279 1.7361 1.08257 2.79477 0.702571 4.13877L0.695904 4.16677C-0.236096 9.03477 -0.242763 14.8841 0.737237 20.0961L0.695904 19.8321C1.08257 21.2041 2.12657 22.2628 3.45324 22.6481L3.48124 22.6548C5.97324 23.3334 16.0146 23.3334 16.0146 23.3334C16.0146 23.3334 26.0266 23.3334 28.5479 22.6548C29.9012 22.2628 30.9466 21.2041 31.3266 19.8601L31.3332 19.8321C31.7572 17.5681 31.9999 14.9628 31.9999 12.3014C31.9999 12.2041 31.9999 12.1054 31.9986 12.0068C31.9999 11.9161 31.9999 11.8081 31.9999 11.7001C31.9999 9.03743 31.7572 6.4321 31.2919 3.90543ZM12.8106 16.8681V7.1441L21.1652 12.0134L12.8106 16.8681Z"
@@ -1030,7 +1099,7 @@
         </a>
        </li>
        <li class="footer__social-item">
-        <a class="header-mobile__social-link" href="#">
+        <a class="footer__social-link" href="#">
          <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
            d="M12.556 18.2414L12.0267 25.6867C12.784 25.6867 13.112 25.3614 13.5053 24.9707L17.056 21.5774L24.4133 26.9654C25.7626 27.7174 26.7133 27.3214 27.0773 25.7241L31.9066 3.09474L31.908 3.09341C32.336 1.09874 31.1866 0.318739 29.872 0.808073L1.48533 11.6761C-0.452007 12.4281 -0.422674 13.5081 1.15599 13.9974L8.41332 16.2547L25.2706 5.70674C26.064 5.18141 26.7853 5.47207 26.192 5.99741L12.556 18.2414Z"
@@ -1039,7 +1108,7 @@
         </a>
        </li>
        <li class="footer__social-item">
-        <a class="header-mobile__social-link" href="#">
+        <a class="footer__social-link" href="#">
          <svg width="32" height="32" viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_639_1735)">
            <path

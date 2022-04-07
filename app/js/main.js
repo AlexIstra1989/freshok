@@ -1,9 +1,19 @@
-document.querySelector('.header-bottom__catalog-btn').addEventListener('click', function(){
+$(function() {
+ document.querySelector('.header-bottom__catalog-btn').addEventListener('click', function(){
  document.querySelector('.header-bottom__catalog-list').classList.toggle('header-bottom__catalog-list--visible');
  this.classList.toggle('header-bottom__catalog-btn--active');
 });
+});
+
 
 $(function() {
+ $('.header-top__burger-btn').on('click', function(){
+  $('.header-mobile').toggleClass('header-mobile--active'),
+  $('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
+ });
+
+
+
  $('.slider__inner').slick ({
   infinite: true,
   fade: true,
@@ -50,13 +60,60 @@ $(function() {
    ]
  });
 
- $('.header-top__burger-btn').on('click', function(){
-  $('.header-mobile').toggleClass('header-mobile--active'),
-  $('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
+ $('.product-slider').slick ({
+  responsive:[
+   {
+    breakpoint: 1600,
+     settings: {
+      arrows:true
+     }
+    },
+    {
+     breakpoint: 576,
+      settings: {
+       arrows: false
+      }
+     }
+   ]
  });
 
- var Mixer = mixitup('.top-products__inner');
- var Mixer = mixitup('.promo__content');
+ $('.product__star').rateYo({
+  starWidth: "16px",
+  normalFill: "#ccccce",
+  retedFill: "#FFB800 ",
+  rating: 3.6
+ });
+
+ $('.product-tabs__link').on('click', function (e) {
+  e.preventDefault();
+  $('.product-tabs__link').removeClass('product-tabs__link--active');
+  $(this).addClass('product-tabs__link--active');
+  $('.product-tabs__item').removeClass('product-tabs__item--active');
+  $($(this).attr('href')).addClass('product-tabs__item--active');
+ });
+
 
  
+});
+
+$(document).ready(function() {
+ $('.product__btn-minus').click(function () {
+     var $input = $(this).parent().find('input');
+     var count = parseInt($input.val()) - 1;
+     count = count < 1 ? 1 : count;
+     $input.val(count);
+     $input.change();
+     return false;
+ });
+ $('.product__btn-plus').click(function () {
+     var $input = $(this).parent().find('input');
+     $input.val(parseInt($input.val()) + 1);
+     $input.change();
+     return false;
+ });
+});
+
+$(function() {
+ var Mixer = mixitup('.top-products__inner');
+ var Mixer = mixitup('.promo__content'); 
 });

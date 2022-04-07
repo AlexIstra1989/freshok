@@ -1,0 +1,35 @@
+.product-comments {
+ &__subtitle {
+  @include text(18px, 1.2, $titleColor);
+  font-family: "Ruda", sans-serif;
+  font-weight: 600;
+  margin-bottom: 30px;
+ }
+ &__item {
+  &:not(:last-child) {
+   padding-bottom: 18px;
+   margin-bottom: 28px;
+   border-bottom: 1px solid #C1C1C1;
+  }
+ }
+ &__box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+ }
+ &__image {
+  margin-right: 24px;
+ }
+ &__author {
+  display: flex;
+  flex-direction: column;
+ }
+ &__name {
+  @include text(14px, 1.2, $titleColor);
+  font-weight: 700;
+  margin-bottom: 4px;
+ }
+ &__star {
+  margin-left: auto;
+ }
+}

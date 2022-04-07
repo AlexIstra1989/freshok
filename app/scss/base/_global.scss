@@ -1,5 +1,8 @@
 body {
  font-family: 'Open Sans', sans-serif;
+ font-size: 16px;
+ line-height: 1.6;
+ color: $textColor;
 }
 
 .title {
@@ -24,4 +27,50 @@ body {
   @include media (xl) {
    display: none;
   }
+}
+
+.breadcrumbs {
+ background-color: $breadcrumbsBg;
+ padding: 24px 0;
+  .container {
+   @extend %container;
+  }
+  &__list {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+  }
+  &__item {
+   position: relative; 
+   &::before,
+   &::after {
+    @include pseudo;
+    @include background (url("../../images/icons/arrow-breadcrumbs.svg"));
+    width: 6px;
+    height: 10px;
+    left: -11px;
+    top: 8px;
+   }
+  &::after{
+   @include background (url("../../images/icons/arrow-breadcrumbs.svg"));
+   left: 118px;
+   top: 8px;
+   }
+  &:nth-child(odd) { 
+   &::before,
+   &::after {
+    display: none;
+   }
+  }
+   &:not(:last-child) {
+    padding-right: 16px;
+   }
+  }
+  &__link {
+   @include text(14px, 1.2, $textColor);
+  }
+ 
+  
+  
+ 
 }

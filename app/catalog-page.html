@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>freshOK</title>
+ <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+ <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+ <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;600;700;900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+ <main class="main">
+  <div class="breadcrumbs">
+   <div class="container">
+    <ul class="breadcrumbs__list">
+     <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">
+       Главная
+      </a>
+     </li>
+     <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">
+       Каталог товаров
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+
+  <section class="catalog">
+   <div class="container">
+    <h2 class="catalog__title">
+     Каталог товаров
+    </h2>
+    <div class="catalog__wrapper">
+     <div class="catalog__filters">
+      <div class="catalog__filter catalog__filter-category">
+        <input class="catalog__filter-input" type="checkbox" id="accordion-1"/>
+        <label class="catalog__filter-caption" for="accordion-1">Категории</label>
+         <ul class="catalog__filter-list">
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Овощи и фрукты 
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Бакалея
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Молочные продукты
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Хлеб
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Мясо
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Колбаса
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Рыба
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Алкоголь
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Напитки
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Торты
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Мясо
+           </a> 
+          </li>
+          <li class="catalog__filter-item">
+           <a class="catalog__filter-link" href="#">
+            Чай, кофе
+           </a> 
+          </li>
+         </ul>
+      </div>
+      <div class="catalog__filter catalog__filter-offers">
+       <input class="catalog__filter-input" type="checkbox" id="accordion-2"/>
+       <label class="catalog__filter-caption" for="accordion-2">Предложения</label>
+       <div class="catalog__filter-content">
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Со скидкой
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Новинка
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Хит
+          </span>
+         </label>
+        </form>
+       </div>
+      </div>
+      <div class="catalog__filter catalog__filter-category">
+       <input class="catalog__filter-input" type="checkbox" id="accordion-3"/>
+       <label class="catalog__filter-caption" for="accordion-3">Бренд</label>
+       <div class="catalog__filter-content">
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           CocaCola
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Pepsi 
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Sprite
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Fanta
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           RedBull
+          </span>
+         </label>
+        </form>
+        <form class="catalog__filter-form" action="#">
+         <label class="catalog__filter-label">
+          <input class="catalog__filter-input" type="checkbox">
+          <span class="catalog__filter-checkbox"></span>
+          <span class="catalog__filter-name">
+           Dr Pepper
+          </span>
+         </label>
+        </form>
+       </div>
+      </div>
+      <div class="filter-price catalog__filter">
+       <input class="filter-price__input" type="checkbox" id="accordion-4">
+       <label class="filter-price__caption" for="accordion-4">Цена</label>
+        <div class="filter-price__content">
+          <form class="filter-price__form" action="#">
+           <label class="filter-price__label">
+            <span>
+             от <span class="filter-price__from"></span>₽
+             до <span class="filter-price__to"></span>₽
+            </span>
+           </label>
+           <input class="filter-price__field" type="text" data-min="0" data-max="1200" data-from="100" data-to="1000">
+          </form>
+        </div>
+       </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  
+ </main>
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script src="js/mixitup.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+ <script src="js/main.js"></script>
+</body>
+
+</html>

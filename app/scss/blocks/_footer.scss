@@ -102,6 +102,10 @@
   max-width: 118px;
   margin-left: -5px;
   border-radius: 0 6px 6px 0;
+  transition: all 0.5s;
+  &:hover {
+   background-color: #4D810C;
+  }
  }
  &__copyright {
   padding-top: 24px;

@@ -77,6 +77,79 @@ $(function() {
    ]
  });
 
+ $('.recent-slider__inner').slick ({
+  // infinite: true,
+  // autoplay: true,
+  // slidesToShow: 4,
+  // slidesToScroll: 2,
+  // variableWidth: true,
+  responsive:[
+   {
+    breakpoint: 2700,
+     settings: {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      autoplay: true,
+      
+      slidesToShow: 4,
+      slidesToScroll: 2
+     }
+    },
+   {
+    breakpoint: 992,
+     settings: {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      autoplay: false,
+      mobileFirst: true,
+      slidesToShow: 3,
+      slidesToScroll: 2,
+     }
+    },
+    {
+     breakpoint: 768,
+      settings: {
+       dots: true,
+       arrows: false,
+       infinite: true,
+       autoplay: false,
+       mobileFirst: true,
+       slidesToShow: 3,
+       slidesToScroll: 2,
+      }
+     },
+     {
+      breakpoint: 576,
+       settings: {
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: false,
+        mobileFirst: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+       }
+      }
+    ]
+ });
+
+ $('.filter-price__field').ionRangeSlider({
+  type: "double",
+  min: 0,
+  max: 999,
+  prefix: $,
+  onStart: function (data) {
+   $('.filter-price__from').text(data.from);
+   $('.filter-price__to').text(data.to);
+  },
+  onChange: function (data) {
+   $('.filter-price__from').text(data.from);
+   $('.filter-price__to').text(data.to);
+  },
+ });
+
  $('.product__star').rateYo({
   starWidth: "16px",
   normalFill: "#ccccce",
@@ -93,7 +166,8 @@ $(function() {
  });
 
 
- 
+
+
 });
 
 $(document).ready(function() {

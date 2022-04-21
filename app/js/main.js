@@ -7,12 +7,22 @@ $(function() {
 
 
 $(function() {
+
+ //$('.select-style ').styler();
+
  $('.header-top__burger-btn').on('click', function(){
   $('.header-mobile').toggleClass('header-mobile--active'),
   $('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
  });
 
+ $('.catalog-content__filter-btn').on('click', function(){
+  $('.catalog__filters').toggleClass('catalog__filters--active');
+  //$('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
+ });
 
+ $('.catalog-filters__btn-close').on('click', function(){
+  $('.catalog__filters').removeClass('catalog__filters--active');
+ });
 
  $('.slider__inner').slick ({
   infinite: true,
@@ -78,11 +88,6 @@ $(function() {
  });
 
  $('.recent-slider__inner').slick ({
-  // infinite: true,
-  // autoplay: true,
-  // slidesToShow: 4,
-  // slidesToScroll: 2,
-  // variableWidth: true,
   responsive:[
    {
     breakpoint: 2700,
@@ -91,7 +96,6 @@ $(function() {
       arrows: true,
       infinite: true,
       autoplay: true,
-      
       slidesToShow: 4,
       slidesToScroll: 2
      }
@@ -135,6 +139,22 @@ $(function() {
     ]
  });
 
+
+ $('.product-tabs__link').on('click', function (e) {
+  e.preventDefault();
+  $('.product-tabs__link').removeClass('product-tabs__link--active');
+  $(this).addClass('product-tabs__link--active');
+  $('.product-tabs__item').removeClass('product-tabs__item--active');
+  $($(this).attr('href')).addClass('product-tabs__item--active');
+ });
+
+
+
+
+ // $('.catalog-content__btn-list').on('click', function () {
+ //  $('.catalog-content__card').addClass('catalog-content__card--list');
+ // });
+
  $('.filter-price__field').ionRangeSlider({
   type: "double",
   min: 0,
@@ -150,24 +170,16 @@ $(function() {
   },
  });
 
+});
+
+
+$(document).ready(function () {
  $('.product__star').rateYo({
   starWidth: "16px",
   normalFill: "#ccccce",
   retedFill: "#FFB800 ",
   rating: 3.6
  });
-
- $('.product-tabs__link').on('click', function (e) {
-  e.preventDefault();
-  $('.product-tabs__link').removeClass('product-tabs__link--active');
-  $(this).addClass('product-tabs__link--active');
-  $('.product-tabs__item').removeClass('product-tabs__item--active');
-  $($(this).attr('href')).addClass('product-tabs__item--active');
- });
-
-
-
-
 });
 
 $(document).ready(function() {

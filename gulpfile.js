@@ -4,6 +4,7 @@ const concat       = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify       = require('gulp-uglify');
 const imagemin     = require('gulp-imagemin');
+const fileInclude  = require('gulp-file-include');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
 
@@ -15,6 +16,16 @@ function browsersync() {
     },
     notofy: false
   })
+}
+
+const htmlInclude = () => {
+ return src('app/html/*html')
+  .pipe(fileInclude({
+   prefix: '@',
+   basepath: '@file'
+  }))
+  .pipe(dest('app/'))
+  .pipe(browserSync.stream());
 }
 
 function styles() {
@@ -58,21 +69,22 @@ function images() {
 
 function build() {
   return src([
-    'app/**/*.html',
+    //'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
-  .pipe(dest('dist'))
+  .pipe(dest('dist'));
 }
 
 function cleanDist() {
-  return del('dist')
+  return del(['dist']);
 }
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload)
+  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/html/**/*.html'], htmlInclude);
 }
 
 
@@ -84,9 +96,9 @@ exports.images = images;
 exports.cleanDist = cleanDist; 
 // exports.build = series(cleanDist, images, build); 
 exports.build = build;
+exports.htmlInclude = htmlInclude;
 
 
 
-
-
-exports.default =  parallel(styles, scripts, browsersync, watching);
+exports.build = series(cleanDist, images, build);
+exports.default =  parallel(styles, htmlInclude, scripts, browsersync, watching);

@@ -69,8 +69,84 @@ body {
   &__link {
    @include text(14px, 1.2, $textColor);
   }
- 
-  
-  
- 
+}
+
+.pagination {
+ display: flex;
+ justify-content: center;
+ &__arrow {
+  width: 48px;
+  height: 48px;
+  background-color: $breadcrumbsBg;
+  position: relative;
+  &::before {
+   @include pseudo;
+   width: 11px;
+   height: 18px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+  }
+ }
+ &__prev {
+  margin-right: 6px;
+   &::before {
+    @include background (url("../images/icons/arrow-left.svg"));
+   }
+ }
+ &__list {
+  display: flex;
+ }
+ &__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: $breadcrumbsBg;
+  &:not(:last-child) {
+   margin-right: 6px;
+  }
+  &:nth-child(even) {
+   display: none;
+    @include media (lg) {
+     display: flex;
+    }
+  }
+ }
+ &__link {
+  @include text(18px, 1, $textColor);
+ }
+ &__next {
+  margin-left: 6px;
+   &::before {
+    @include background (url("../images/icons/arrow-right.svg"));
+   }
+ }
+}
+
+.catalog-filters__btn-close {
+ width: 18px;
+ height: 18px;
+ position: absolute;
+ cursor: pointer;
+ right: 15px;
+ top: 20px;
+}
+
+.catalog-filters__line {
+ display: block;
+ width: 18px;
+ height: 2px;
+ background-color: $titleColor;
+ transform: rotate(45deg);
+ position: relative;
+  &::before {
+   @include pseudo;
+   width: 18px;
+   height: 2px;
+   background-color: $titleColor;
+   top: 0;
+   transform: rotate(90deg);
+  }
 }

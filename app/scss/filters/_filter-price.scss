@@ -7,6 +7,8 @@
  }
  &__caption {
   display: block;
+  font-family: "Ruda", sans-serif;
+  font-weight: 700;
   padding: 18px;
   border: 1px solid #C1C1C1;
   border-radius: 6px 6px 0 0;
@@ -34,15 +36,16 @@
   margin-top: 22px;
   margin-bottom: 24px;
    span {
-    @include text(16px, 1.2, $textColor);
+    @include text(16px, 1.2, #C1C1C1);
    }
  }
  &__from,
  &__to {
   padding: 12px 25px;
   background-color: rgba(193, 193, 193, 0.5);
+  color: $titleColor;
   border: 1px solid #C1C1C1;
-  margin: 0 6px;
+  margin-right: 6px;
  }
  &__input:checked ~ &__content {
   display: block;

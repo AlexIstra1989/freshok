@@ -89,7 +89,6 @@
   justify-content: flex-end;
   align-items: flex-start;
   margin-bottom: 16px;
-
  }
  &__badge {
   @include text(10px, 1, $primaryColor);
@@ -101,9 +100,6 @@
    &--hit {
     background-color: #FF7A00;
    }
- }
- &__like {
-  
  }
  &__image {
   margin-bottom: 10px;

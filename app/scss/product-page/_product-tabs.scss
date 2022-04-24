@@ -1,8 +1,10 @@
 .product-tabs {
-
+ max-width: 680px;
+ margin: 0 auto;
  &__top {
   padding-top: 15px;
   margin-bottom: 30px; 
+  text-align: center;
  }
  &__item {
   display: none;

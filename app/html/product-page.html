@@ -218,18 +218,22 @@
          <span class="product-review__estimate">Ваша оценка *</span>
          <div class="product__star product-review__star" data-rateyo-rating="0"></div>
          <form class="product-review__form" action="#">
-          <label class="product-review__label" for="review">
-           <span class="product-review__feedback">Ваш отзыв *</span>
-           <textarea class="product-review__entry" name="review" required>Введите текст отзыва</textarea>
-          </label>
-          <label class="product-review__label" for="username">
-           <span class="product-review__name">Имя</span>
-           <input class="product-review__field" type="text" name="username" placeholder="Введите ваше имя" required>
-          </label>
-          <label class="product-review__label" for="email">
-           <span class="product-review__email">Email *</span>
-           <input class="product-review__field" type="text" name="email" placeholder="youremail@mail.com" required>
-          </label>
+          <div class="product-review__fields">
+           <label class="product-review__label" for="review">
+            <span class="product-review__feedback">Ваш отзыв *</span>
+            <textarea class="product-review__entry" name="review" required>Введите текст отзыва</textarea>
+           </label>
+           <div class="product-review__inputs">
+            <label class="product-review__label" for="username">
+             <span class="product-review__name">Имя</span>
+             <input class="product-review__field" type="text" name="username" placeholder="Введите ваше имя" required>
+            </label>
+            <label class="product-review__label" for="email">
+             <span class="product-review__email">Email *</span>
+             <input class="product-review__field" type="text" name="email" placeholder="youremail@mail.com" required>
+            </label>
+           </div>
+          </div>
           <label class="product-review__label product-review__label-checkbox">
            <input class="product-review__checkbox" type="checkbox">
            <p class="product-review__text">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих

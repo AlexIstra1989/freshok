@@ -5,9 +5,14 @@ $(function() {
 });
 });
 
-
 $(function() {
 
+ $('.product__star').rateYo({
+  starWidth: "16px",
+  normalFill: "#ccccce",
+  retedFill: "#FFB800 ",
+  rating: 3.6
+ });
  //$('.select-style ').styler();
 
  $('.header-top__burger-btn').on('click', function(){
@@ -17,12 +22,12 @@ $(function() {
 
  $('.catalog-content__filter-btn').on('click', function(){
   $('.catalog__filters').toggleClass('catalog__filters--active');
-  //$('.header-top__burger-btn').toggleClass('header-top__burger-btn--active');
  });
 
  $('.catalog-filters__btn-close').on('click', function(){
   $('.catalog__filters').removeClass('catalog__filters--active');
  });
+
 
  $('.slider__inner').slick ({
   infinite: true,
@@ -139,7 +144,6 @@ $(function() {
     ]
  });
 
-
  $('.product-tabs__link').on('click', function (e) {
   e.preventDefault();
   $('.product-tabs__link').removeClass('product-tabs__link--active');
@@ -147,13 +151,6 @@ $(function() {
   $('.product-tabs__item').removeClass('product-tabs__item--active');
   $($(this).attr('href')).addClass('product-tabs__item--active');
  });
-
-
-
-
- // $('.catalog-content__btn-list').on('click', function () {
- //  $('.catalog-content__card').addClass('catalog-content__card--list');
- // });
 
  $('.filter-price__field').ionRangeSlider({
   type: "double",
@@ -170,17 +167,11 @@ $(function() {
   },
  });
 
+
+
 });
 
 
-$(document).ready(function () {
- $('.product__star').rateYo({
-  starWidth: "16px",
-  normalFill: "#ccccce",
-  retedFill: "#FFB800 ",
-  rating: 3.6
- });
-});
 
 $(document).ready(function() {
  $('.product__btn-minus').click(function () {
@@ -202,4 +193,8 @@ $(document).ready(function() {
 $(function() {
  var Mixer = mixitup('.top-products__inner');
  var Mixer = mixitup('.promo__content'); 
+});
+
+$(document).ready(function () {
+
 });

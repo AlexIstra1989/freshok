@@ -132,6 +132,9 @@ body {
  cursor: pointer;
  right: 15px;
  top: 20px;
+  @include media (md) {
+   display: none;
+  }
 }
 
 .catalog-filters__line {

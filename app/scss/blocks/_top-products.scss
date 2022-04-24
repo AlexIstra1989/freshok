@@ -90,6 +90,17 @@
   align-items: flex-start;
   margin-bottom: 16px;
  }
+ &__like {
+  transition: all 0.5s;
+  &:hover,
+   &:focus {
+    svg {
+     path {
+      fill: #F44336;
+     }
+    }
+   }
+ }
  &__badge {
   @include text(10px, 1, $primaryColor);
   font-weight: 700;

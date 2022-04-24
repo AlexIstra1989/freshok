@@ -1,7 +1,4 @@
 .product-review {
-
-
-
  &__subtitle {
   @include text(18px, 1.2, $titleColor);
   font-family: "Ruda", sans-serif;
@@ -18,6 +15,13 @@
  &__form {
   margin-top: 18px;
  }
+ &__fields {
+  margin-bottom: 26px;
+   @include media (md) {
+    display: flex;
+    justify-content: space-between;
+   }
+ }
  &__label {
   display: block;
    &:not(:last-child) {
@@ -27,12 +31,13 @@
     @include text(16px, 1.3, $titleColor);
     font-weight: 600;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 11px;
    }
  }
  &__entry {
   @include text(14px, 1.3, #C1C1C1);
-  width: 345px;
+  min-width: 345px; 
+  width: 100%;
   height: 165px;
   resize: none;
   padding: 18px;
@@ -44,10 +49,13 @@
    &:focus {
     border-color: $secondaryColor;
    }
+   @include media (md) {
+    width: 400px;
+   }
  }
  &__field {
   width: 100%;
-  padding: 18px;
+  padding: 15px;
   border: 1px solid #C1C1C1;
   border-radius: 3px;
   outline: none;
@@ -59,7 +67,9 @@
    &:focus {
     border-color: $secondaryColor;
    }
-   transition: all 0.5s;
+   @include media (md) {
+    width: 260px;
+   }
  }
  &__label-checkbox {
   display: flex;
